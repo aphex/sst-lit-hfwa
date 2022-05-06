@@ -1,0 +1,17 @@
+import { HFWAStack } from "./HFWAStack";
+import { App } from "@serverless-stack/resources";
+
+/**
+ * @param {App} app
+ */
+export default function (app) {
+  app.setDefaultFunctionProps({
+    runtime: "nodejs14.x",
+    srcPath: "backend",
+    bundle: {
+      format: "esm",
+      nodeModules: ['parse5']
+    },
+  });
+  app.stack(HFWAStack);
+}

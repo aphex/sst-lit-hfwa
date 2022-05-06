@@ -1,0 +1,1 @@
+Simple Api Gateway + Lambda + S3 SSR demo with Lit using SST
